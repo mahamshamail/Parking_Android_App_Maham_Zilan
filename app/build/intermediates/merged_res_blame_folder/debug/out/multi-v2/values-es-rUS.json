@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/zilanouyang/Codes/AndroidFinalProject/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml",
+            "outputFile": "/Users/zilanouyang/Codes/AndroidFinalProject copy/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-es-rUS/values-es-rUS.xml",
             "map": [
                 {
                     "source": "/Users/zilanouyang/.gradle/caches/transforms-2/files-2.1/ee833a536128e3b427c4b16b1ddd3d53/navigation-ui-2.2.2/res/values-es-rUS/values-es-rUS.xml",

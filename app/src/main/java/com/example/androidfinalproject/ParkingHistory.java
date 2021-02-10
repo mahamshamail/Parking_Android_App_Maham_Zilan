@@ -35,8 +35,7 @@ public class ParkingHistory extends AppCompatActivity {
         recreate();
     }
     public void ClickAddNewParking(View view){
-        //TODO: redirect to create new parking activity
-        //redirectActivity();
+        LaunchScreenActivity.redirectActivity(this, CreateParkingActivity.class);
     }
     public void ClickLogOut(View view){
         LaunchScreenActivity.logout(this);

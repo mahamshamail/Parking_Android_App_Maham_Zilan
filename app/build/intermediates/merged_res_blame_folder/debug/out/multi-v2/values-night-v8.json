@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/zilanouyang/Codes/AndroidFinalProject/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
+            "outputFile": "/Users/zilanouyang/Codes/AndroidFinalProject copy/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/zilanouyang/Codes/AndroidFinalProject/app/src/main/res/values-night/themes.xml",
+                    "source": "/Users/zilanouyang/Codes/AndroidFinalProject copy/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1740,6 +1740,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable parking_logo
+drawable parking_nav
 drawable side_nav_bar
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -2240,6 +2241,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_create_parking
 layout activity_launch_screen
 layout activity_main
 layout activity_parking_history

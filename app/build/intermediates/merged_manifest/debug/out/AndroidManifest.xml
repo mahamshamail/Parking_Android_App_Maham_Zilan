@@ -19,6 +19,7 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.AndroidFinalProject" >
+        <activity android:name="com.example.androidfinalproject.CreateParkingActivity" />
         <activity android:name="com.example.androidfinalproject.ParkingHistory" />
         <activity android:name="com.example.androidfinalproject.UserProfileActivity" />
         <activity android:name="com.example.androidfinalproject.LaunchScreenActivity" />

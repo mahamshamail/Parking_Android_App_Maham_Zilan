@@ -57,7 +57,7 @@ public class LaunchScreenActivity extends AppCompatActivity {
 
     public void ClickAddNewParking(View view){
         //TODO: redirect to create new parking activity
-        //redirectActivity();
+        redirectActivity(this, CreateParkingActivity.class);
     }
 
     public void ClickUserProfile(View view){
