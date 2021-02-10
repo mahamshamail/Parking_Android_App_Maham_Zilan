@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">AndroidFinalProject</string>
+    <string name="parking_logo">parking logo</string>
+    <string name="hello_there_welcome_back">Hello there, Welcome back</string>
+    <string name="please_enter_user_name_email">Please Enter User Name/Email</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_in">Sign In</string>
+
+    <string name="sign_up"><u>Sign Up</u></string>
+    <string name="get_on_board">Get on Board</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="license_plate_no">License Plate No.</string>
+    <string name="title_activity_launch_screen">LaunchScreenActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+</resources>
