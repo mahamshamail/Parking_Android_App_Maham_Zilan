@@ -38,7 +38,6 @@
 #### To be implemented:
 | Zilan’s List of functionalities  | Maham’s List of functionalities|
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-  Content Cell  
-| Content Cell  | Content Cell  |
-
+| Sign Up  | Add Parking |  
+| Sign In  | Parking Details  |
+| Update Profile  | Parking Location  |
