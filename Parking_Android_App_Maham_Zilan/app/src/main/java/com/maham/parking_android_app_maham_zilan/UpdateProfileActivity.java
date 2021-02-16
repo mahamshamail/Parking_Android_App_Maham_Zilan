@@ -2,6 +2,7 @@ package com.maham.parking_android_app_maham_zilan;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.IntentCompat;
 import androidx.lifecycle.Observer;
 
 import android.content.DialogInterface;
@@ -162,6 +163,9 @@ public class UpdateProfileActivity extends AppCompatActivity {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 userViewModel.deleteUser(userID);
+                                Intent i = new Intent(UpdateProfileActivity.this, SignInActivity.class);
+                                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                                startActivity(i);
                             }
                         })
                         .setNegativeButton("Cancel", null)
