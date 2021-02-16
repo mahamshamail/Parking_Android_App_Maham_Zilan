@@ -213,7 +213,7 @@ public class UserRepository {
                                 userCar.postValue(value.get("carPlateNumber").toString());
                                 userContact.postValue(value.get("contactNumber").toString());
                                 userEmail.postValue(value.get("email").toString());
-                                Log.e(" inside getUserProfile  ", userName.getValue());
+//                                Log.e(" inside getUserProfile  ", userName.getValue());
                             }else {
                                 Log.e(" inside getUserProfile error ", "error.toString()");
 

@@ -14,8 +14,6 @@ import com.maham.parking_android_app_maham_zilan.model.ParkingList;
 import com.maham.parking_android_app_maham_zilan.viewmodel.ParkingListViewModel;
 import com.maham.parking_android_app_maham_zilan.viewmodel.UserViewModel;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -29,6 +27,7 @@ public class ParkingDetailsActivity extends AppCompatActivity {
     private TextView carPlate;
     private TextView suitNoOfHosts;
     private Button viewParkingListButton;
+    private Button viewParkingLocationButton;
 
     private ParkingListViewModel parkingListViewModel;
     private UserViewModel userViewModel;
@@ -45,6 +44,13 @@ public class ParkingDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parking_details);
         viewParkingListButton = findViewById(R.id.viewPList);
+        viewParkingLocationButton = findViewById(R.id.btnViewMap);
+        viewParkingLocationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToMap();
+            }
+        });
 
         viewParkingListButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,5 +116,10 @@ public class ParkingDetailsActivity extends AppCompatActivity {
         this.finish();
         Intent mainIntent = new Intent(this, MainActivity.class);
         startActivity(mainIntent);
+    }
+    private void goToMap(){
+        this.finish();
+        Intent mapIntent = new Intent(this, MapsActivity.class);
+        startActivity(mapIntent);
     }
 }

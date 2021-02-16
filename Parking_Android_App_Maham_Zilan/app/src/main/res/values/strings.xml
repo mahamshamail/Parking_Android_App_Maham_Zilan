@@ -15,4 +15,7 @@
     <string name="update_contact_number">Update Contact Number</string>
     <string name="update_car_plate">Update Car Plate Number</string>
     <string name="update_profile">Update User Profile</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
