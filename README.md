@@ -39,5 +39,5 @@
 | Zilan’s List of functionalities  | Maham’s List of functionalities|
 | ------------- | ------------- |
 | Sign Up  | Add Parking |  
-| Sign In  | Parking Details  |
+| Sign In  | Parking List |
 | Update Profile  | Parking Location  |
