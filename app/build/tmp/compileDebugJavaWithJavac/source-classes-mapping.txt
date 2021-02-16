@@ -1,20 +1,38 @@
-com/example/androidfinalproject/ParkingHistory.java
- com.example.androidfinalproject.ParkingHistory
-com/example/androidfinalproject/LaunchScreenActivity.java
- com.example.androidfinalproject.LaunchScreenActivity
- com.example.androidfinalproject.LaunchScreenActivity$1
- com.example.androidfinalproject.LaunchScreenActivity$2
-com/example/androidfinalproject/CreateParkingActivity.java
- com.example.androidfinalproject.CreateParkingActivity
-com/example/androidfinalproject/SignUpActivity.java
- com.example.androidfinalproject.SignUpActivity
- com.example.androidfinalproject.SignUpActivity$1
- com.example.androidfinalproject.SignUpActivity$2
-com/example/androidfinalproject/MainActivity.java
- com.example.androidfinalproject.MainActivity
- com.example.androidfinalproject.MainActivity$1
- com.example.androidfinalproject.MainActivity$2
-com/example/androidfinalproject/UserProfileActivity.java
- com.example.androidfinalproject.UserProfileActivity
 com/example/androidfinalproject/BuildConfig.java
  com.example.androidfinalproject.BuildConfig
+com/example/androidfinalproject/adapter/UserProfileItemAdapter.java
+ com.example.androidfinalproject.adapter.UserProfileItemAdapter
+com/example/androidfinalproject/model/User.java
+ com.example.androidfinalproject.model.User
+com/example/androidfinalproject/model/UserProfile.java
+ com.example.androidfinalproject.model.UserProfile
+com/example/androidfinalproject/activity/SignUpActivity.java
+ com.example.androidfinalproject.activity.SignUpActivity
+ com.example.androidfinalproject.activity.SignUpActivity$1
+ com.example.androidfinalproject.activity.SignUpActivity$2
+com/example/androidfinalproject/repository/UserRepository.java
+ com.example.androidfinalproject.repository.UserRepository
+ com.example.androidfinalproject.repository.UserRepository$1
+ com.example.androidfinalproject.repository.UserRepository$2
+ com.example.androidfinalproject.repository.UserRepository$3
+ com.example.androidfinalproject.repository.UserRepository$4
+com/example/androidfinalproject/activity/UpdateProfileActivity.java
+ com.example.androidfinalproject.activity.UpdateProfileActivity
+com/example/androidfinalproject/viewModels/UserViewModel.java
+ com.example.androidfinalproject.viewModels.UserViewModel
+com/example/androidfinalproject/activity/UserProfileActivity.java
+ com.example.androidfinalproject.activity.UserProfileActivity
+ com.example.androidfinalproject.activity.UserProfileActivity$1
+com/example/androidfinalproject/activity/ParkingHistory.java
+ com.example.androidfinalproject.activity.ParkingHistory
+com/example/androidfinalproject/activity/LaunchScreenActivity.java
+ com.example.androidfinalproject.activity.LaunchScreenActivity
+ com.example.androidfinalproject.activity.LaunchScreenActivity$1
+ com.example.androidfinalproject.activity.LaunchScreenActivity$2
+com/example/androidfinalproject/activity/MainActivity.java
+ com.example.androidfinalproject.activity.MainActivity
+ com.example.androidfinalproject.activity.MainActivity$1
+ com.example.androidfinalproject.activity.MainActivity$2
+ com.example.androidfinalproject.activity.MainActivity$3
+com/example/androidfinalproject/activity/CreateParkingActivity.java
+ com.example.androidfinalproject.activity.CreateParkingActivity
