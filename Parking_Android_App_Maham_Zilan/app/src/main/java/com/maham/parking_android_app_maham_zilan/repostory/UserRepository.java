@@ -191,12 +191,32 @@ public class UserRepository {
     public void getUserProfile(String userID){
         Log.e(" here user profile ", userID);
         try{
-            db.collection(COLLECTION_NAME).document(userID)
+            db.collection(COLLECTION_NAME)
+                    .document(userID)
                     .addSnapshotListener(new EventListener<DocumentSnapshot>() {
                         @Override
                         public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                            if(error != null){
-                                return;
+                            if(error == null){
+                               // user.postValue(value.toObject(User.class));
+
+                                Log.e(" TAH ", "TAH");
+//                                tempUser.setEmail(value.get("email").toString());
+//                                tempUser.setName(value.get("name").toString());
+//                                tempUser.setContactNumber(value.get("contactNumber").toString());
+//                                tempUser.setCarPlateNumber(value.get("carPlateNumber").toString());
+//                                tempUser.setPassword(value.get("password").toString());
+
+//                               Log.e(" inside getUserProfile", tempUser.getName());
+//                                user.postValue(tempUser);
+                                String name = value.get("name").toString();
+                                userName.postValue("jkbhkjhbk");
+                                userCar.postValue(value.get("carPlateNumber").toString());
+                                userContact.postValue(value.get("contactNumber").toString());
+                                userEmail.postValue(value.get("email").toString());
+//                                Log.e(" inside getUserProfile  ", userName.getValue());
+                            }else {
+                                Log.e(" inside getUserProfile error ", "error.toString()");
+
                             }
                             if(value != null && value.exists()){
                                 Log.e("getUserProfile", "onEvent: " + value.getData().get("name"));
@@ -210,7 +230,6 @@ public class UserRepository {
                                 userEmail.setValue(email);
                                 userCar.setValue(plateNo);
                                 userDetail.setValue(new User(email, fullName, password, phoneNo, plateNo));
-
                             }
                             else {
                                 Log.d(TAG, "Current data: null");

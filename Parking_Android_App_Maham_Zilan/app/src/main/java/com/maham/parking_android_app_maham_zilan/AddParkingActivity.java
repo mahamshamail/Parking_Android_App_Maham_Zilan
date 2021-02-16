@@ -49,6 +49,7 @@ public class AddParkingActivity extends AppCompatActivity {
 
     Geocoder geocoder;
     List<Address> addresses;
+    List<Address> addresses1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -209,6 +210,23 @@ public class AddParkingActivity extends AppCompatActivity {
             Log.e("Hours: ", "Radio Button is null");
             Toast.makeText(getApplicationContext(), "Select number of hours!", Toast.LENGTH_LONG ).show();
             return false;
+        }
+        if (this.edtParkingLocation == null){
+            Log.e("Hours: ", "Radio Button is null");
+            this.edtParkingLocation.setError("Enter Parking Location");
+            return false;
+        }else{
+            try{
+                //getLocationFromAddress(edtParkingLocation.getText().toString());
+               addresses1 = geocoder.getFromLocationName(edtParkingLocation.getText().toString(), 1);
+               double lat = addresses1.get(0).getLatitude();
+               Log.e(" latitude ", lat +" " );
+            }
+            catch ( Exception e){
+                Log.e(" Add parking activity ", "reverse geocoding fail.");
+                Toast.makeText(getApplicationContext(), "Invalid Parking location", Toast.LENGTH_LONG ).show();
+                return false;
+            }
         }
         return true;
     }
