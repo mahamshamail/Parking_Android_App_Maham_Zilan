@@ -35,7 +35,7 @@
 2. detail view of each parking when the user taps on any item of the list, display all the information about the parking in appropriate format. 
 3. In the detail view of parking, allow the user to open the parking location on map and display the route to the parking location from the current location of the device. 
 
-#### To be implemented:
+#### Fuctionalities implemented:
 | Zilan’s List of functionalities  | Maham’s List of functionalities|
 | ------------- | ------------- |
 | Sign Up  | Add Parking |  
