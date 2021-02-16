@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="100px"
+    android:layout_height="match_parent"
+    tools:context=".ParkingDetailsActivity">
+
+    <TextView
+        android:id="@+id/parkingDetailsTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:text="PARKING DETAILS"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/parkingDetailsTitle"
+        android:id="@+id/parkingAddressTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:paddingBottom="40dp"
+        android:text="Parking Address : "
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/parkingDetailsTitle"
+
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Parking Address"
+        android:id="@+id/parkingAddress2"
+        android:padding="7dp"
+        app:layout_constraintLeft_toRightOf="@+id/parkingAddressTitle2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/parkingAddressTitle2"
+        android:id="@+id/parkingDurationTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:paddingTop="7dp"
+        android:paddingRight="6dp"
+        android:paddingLeft="7dp"
+        android:paddingBottom="23dp"
+
+
+        android:text="Parking Duration : "
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parking duration "
+
+        android:id="@+id/parkingDuration"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:paddingBottom="23dp"
+
+        app:layout_constraintLeft_toRightOf="@+id/parkingDurationTitle2"
+        app:layout_constraintTop_toBottomOf="@id/parkingAddress2"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/parkingDurationTitle2"
+        android:id="@+id/parkingHoursTitle2"
+        android:layout_width="wrap_content"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:paddingBottom="23dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+
+
+
+        android:text="Parking Date : "
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parking Date "
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:paddingBottom="13dp"
+        android:width="200dp"
+        android:id="@+id/parkingHours"
+        app:layout_constraintLeft_toRightOf="@+id/parkingDurationTitle2"
+        app:layout_constraintTop_toBottomOf="@id/parkingDuration"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/parkingHoursTitle2"
+        android:id="@+id/buildingCodeTitle"
+        android:layout_width="wrap_content"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:paddingBottom="23dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+
+        android:text="Building Code : "
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Building Code "
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:paddingBottom="23dp"
+        android:id="@+id/buildingCodeT"
+        app:layout_constraintLeft_toRightOf="@+id/parkingDurationTitle2"
+        app:layout_constraintTop_toBottomOf="@id/parkingHours"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/buildingCodeTitle"
+        android:id="@+id/carPlateTitle2"
+        android:layout_width="wrap_content"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:paddingBottom="23dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+
+        android:text="Car Plate No. : "
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="car plate"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:paddingBottom="23dp"
+        android:id="@+id/carPlate"
+        app:layout_constraintLeft_toRightOf="@+id/parkingDurationTitle2"
+        app:layout_constraintTop_toBottomOf="@id/buildingCodeT"
+        tools:ignore="MissingConstraints" />
+
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/carPlateTitle2"
+        android:id="@+id/suitNoOfHostTitle"
+        android:layout_width="wrap_content"
+        android:padding="7dp"
+        android:textColor="@color/purple_200"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:paddingRight="20dp"
+        android:text="Suit No. of Hosts :"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="suit no of host"
+        android:padding="7dp"
+        android:id="@+id/suitNoOfHost"
+        app:layout_constraintLeft_toRightOf="@+id/parkingDurationTitle2"
+        app:layout_constraintTop_toBottomOf="@id/carPlate"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnViewMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Parkiing On Map"
+
+        app:layout_constraintTop_toBottomOf="@id/suitNoOfHost" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Parking List"
+        android:id="@+id/viewPList"
+        app:layout_constraintTop_toBottomOf="@id/btnViewMap" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
