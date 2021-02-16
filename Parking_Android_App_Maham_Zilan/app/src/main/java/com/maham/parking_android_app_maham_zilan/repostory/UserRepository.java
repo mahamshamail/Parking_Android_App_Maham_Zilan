@@ -36,7 +36,7 @@ public class UserRepository {
     public MutableLiveData<String> userContact = new MutableLiveData<String>();
     public MutableLiveData<String> userEmail = new MutableLiveData<String>();
     public MutableLiveData<String> userCar = new MutableLiveData<String>();
-
+    public MutableLiveData<User> userDetail = new MutableLiveData<User>();
 
 
     // public MutableLiveData<User> user = new MutableLiveData<User>();
@@ -111,6 +111,7 @@ public class UserRepository {
     }
 
     public void updateUserName(String userID, String name){
+        Log.e("update name", "updateUserName: " + name );
         db.collection(COLLECTION_NAME)
                 .document(userID)
                 .update("name", name)
@@ -189,36 +190,31 @@ public class UserRepository {
 
     public void getUserProfile(String userID){
         Log.e(" here user profile ", userID);
-       // User tempUser = new User();
         try{
-            db.collection(COLLECTION_NAME)
-                    .document(userID)
+            db.collection(COLLECTION_NAME).document(userID)
                     .addSnapshotListener(new EventListener<DocumentSnapshot>() {
                         @Override
                         public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                            if(error == null){
-                               // user.postValue(value.toObject(User.class));
-
-                                Log.e(" TAH ", "TAH");
-//                                tempUser.setEmail(value.get("email").toString());
-//                                tempUser.setName(value.get("name").toString());
-//                                tempUser.setContactNumber(value.get("contactNumber").toString());
-//                                tempUser.setCarPlateNumber(value.get("carPlateNumber").toString());
-//                                tempUser.setPassword(value.get("password").toString());
-
-//                               Log.e(" inside getUserProfile", tempUser.getName());
-//                                user.postValue(tempUser);
-                                String name = value.get("name").toString();
-                                userName.postValue("jkbhkjhbk");
-                                userCar.postValue(value.get("carPlateNumber").toString());
-                                userContact.postValue(value.get("contactNumber").toString());
-                                userEmail.postValue(value.get("email").toString());
-                                Log.e(" inside getUserProfile  ", userName.getValue());
-                            }else {
-                                Log.e(" inside getUserProfile error ", "error.toString()");
+                            if(error != null){
+                                return;
+                            }
+                            if(value != null && value.exists()){
+                                Log.e("getUserProfile", "onEvent: " + value.getData().get("name"));
+                                String fullName = value.getData().get("name").toString();
+                                String email = value.getData().get("email").toString();
+                                String password = value.getData().get("password").toString();
+                                String plateNo = value.getData().get("carPlateNumber").toString();
+                                String phoneNo = value.getData().get("contactNumber").toString();
+                                userName.setValue(fullName);
+                                userContact.setValue(phoneNo);
+                                userEmail.setValue(email);
+                                userCar.setValue(plateNo);
+                                userDetail.setValue(new User(email, fullName, password, phoneNo, plateNo));
 
                             }
-
+                            else {
+                                Log.d(TAG, "Current data: null");
+                            }
                         }
                     });
 
@@ -226,6 +222,27 @@ public class UserRepository {
             Log.e(TAG, ex.getLocalizedMessage());
             Log.e(TAG, ex.toString());
 
+        }
+    }
+
+    public void deleteUser(String userID){
+        try{
+            db.collection(COLLECTION_NAME).document(userID)
+                    .delete()
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Log.e(TAG, "onSuccess: deleting " + userID);
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Log.w(TAG, "onFailure: deleting " + userID);
+                        }
+                    });
+        }catch (Exception ex){
+            Log.e(TAG, "deleteUser: ", ex.fillInStackTrace());
         }
     }
 }

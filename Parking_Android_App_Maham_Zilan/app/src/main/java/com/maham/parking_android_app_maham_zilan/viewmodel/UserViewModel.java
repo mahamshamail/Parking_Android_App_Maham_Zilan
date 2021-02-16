@@ -37,4 +37,19 @@ public class UserViewModel extends ViewModel {
         this.userRepository.updateUserContactNumber(userId, contact);
         this.userRepository.updateUserEmail(userId, email);
     }
+    public void updateUserName(String userId, String name){
+        this.userRepository.updateUserName(userId,name);
+    }
+    public void updateUserEmail(String userId, String email){
+        this.userRepository.updateUserEmail(userId,email);
+    }
+    public void updateUserContactNumber(String userId, String contact){
+        this.userRepository.updateUserContactNumber(userId, contact);
+    }
+    public void updateUserPlate(String userId, String plate){
+        this.userRepository.updateUserCarPlateNumber(userId, plate);
+    }
+    public void deleteUser(String userId){
+        this.userRepository.deleteUser(userId);
+    }
 }
