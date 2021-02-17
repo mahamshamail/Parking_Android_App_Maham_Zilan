@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".AddParkingActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvTitleAdd"
+        android:textAlignment="center"
+        android:text="ADD YOUR PARKING"
+        android:padding="3dp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+        tools:ignore="MissingConstraints" />
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/tvTitleAdd"
+
+        android:id="@+id/edtBuildingCode"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Enter Building Code"
+    android:inputType="text"
+    tools:ignore="MissingConstraints" />
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/edtBuildingCode"
+        android:id="@+id/edtCarPlateNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Car Plate Number"
+        android:inputType="text"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        app:layout_constraintTop_toBottomOf="@+id/edtCarPlateNumber"
+
+        android:id="@+id/edtSuitNumberOfHosts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Suit no. of host"
+        android:inputType="text"
+
+        />
+
+    <EditText
+        android:id="@+id/edtParkingLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/edtSuitNumberOfHosts"
+        android:hint="Enter Parking Location"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginLeft="4dp"
+        android:text="OR"
+        app:layout_constraintTop_toBottomOf="@id/edtParkingLocation"
+        tools:layout_editor_absoluteY="377dp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/useCurrentLocationBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Use Current Location"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/or"
+
+        />
+
+    <RadioGroup
+        android:layout_width= "match_parent"
+        android:id="@+id/radioGroup"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/useCurrentLocationBtn"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleRadio"
+            android:textAlignment="center"
+            android:text="How many hours do you want to park?"
+            android:padding="3dp"
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton1"
+            android:text="1-hour or less"
+
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton4"
+            android:text="4-hours"
+
+
+
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton12"
+            android:text="12-hours"
+
+
+            />
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton24"
+            android:text="24-hours"
+
+
+            />
+    </RadioGroup>
+
+
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/radioGroup"
+
+ />
+
+    <Button
+        android:id="@+id/cancelParking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/submitButton"
+
+
+/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

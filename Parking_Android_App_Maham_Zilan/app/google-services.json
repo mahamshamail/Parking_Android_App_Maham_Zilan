@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "228256030986",
+    "project_id": "parkingappandroid-b2fe2",
+    "storage_bucket": "parkingappandroid-b2fe2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:228256030986:android:02c2dd2e3f2031bc83daf3",
+        "android_client_info": {
+          "package_name": "com.maham.parking_android_app_maham_zilan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "228256030986-57eltfa8l6c5r4qbje3u7apksp6c7jkp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFsAJd1A6gpUmbtNLqbgNlNe0Cbxs2zBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "228256030986-57eltfa8l6c5r4qbje3u7apksp6c7jkp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
