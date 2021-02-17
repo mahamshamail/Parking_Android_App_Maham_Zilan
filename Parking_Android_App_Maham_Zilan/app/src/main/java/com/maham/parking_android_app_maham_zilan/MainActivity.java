@@ -172,10 +172,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onClick(DialogInterface dialogInterface, int i) {
 
                         Log.e(TAG, "Signing out. " );
-
                         Toast.makeText(getApplicationContext(), "Signing out...", Toast.LENGTH_LONG ).show();
-                        Intent signOutIntent = new Intent(MainActivity.this , SignInActivity.class);
-                        startActivity(signOutIntent);
+//                        Intent signOutIntent = getBaseContext().getPackageManager().getLaunchIntentForPackage(getBaseContext().getPackageName());
+//                        signOutIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                        startActivity(signOutIntent);
+                        logOut();
+
                         // ParkingList newParkingList = new ParkingList(edtNewTodo.getText().toString());
 
                         //save todo to db
@@ -207,5 +209,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //if success then only perform teh next line
 
        this.parkingListArrayList.remove(parkingList1);
+    }
+    public void logOut(){
+        userViewModel.getUserRepository().signInStatus.postValue("LOGOUT");
+        finishAndRemoveTask();
+        Intent signOutIntent = new Intent(this , SignInActivity.class);
+        startActivity(signOutIntent);
     }
 }

@@ -162,10 +162,8 @@ public class UpdateProfileActivity extends AppCompatActivity {
                         .setPositiveButton("Delete anyway", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                userViewModel.deleteUser(userID);
-                                Intent i = new Intent(UpdateProfileActivity.this, SignInActivity.class);
-                                i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-                                startActivity(i);
+                                deleteAndLogOut();
+
                             }
                         })
                         .setNegativeButton("Cancel", null)
@@ -180,6 +178,13 @@ public class UpdateProfileActivity extends AppCompatActivity {
         Intent mainIntent = new Intent(this, MainActivity.class);
         startActivity(mainIntent);
     }
-
+    private void deleteAndLogOut(){
+        userViewModel.deleteUser(userID);
+        userViewModel.getUserRepository().signInStatus.postValue("LOGOUT");
+        finishAndRemoveTask();
+        Intent i = new Intent(this, SignInActivity.class);
+        //i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivity(i);
+    }
 
 }

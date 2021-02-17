@@ -252,6 +252,7 @@ public class UserRepository {
                         @Override
                         public void onSuccess(Void aVoid) {
                             Log.e(TAG, "onSuccess: deleting " + userID);
+                            //signInStatus.postValue("LOGOUT");
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {

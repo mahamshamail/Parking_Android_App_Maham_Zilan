@@ -71,8 +71,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     private void goToMain(){
         this.finish();
-        Intent mainIntent = new Intent(this, MainActivity.class);
-        startActivity(mainIntent);
+//        Intent mainIntent = new Intent(this, MainActivity.class);
+//        startActivity(mainIntent);
     }
 
     private Boolean validateData(){
