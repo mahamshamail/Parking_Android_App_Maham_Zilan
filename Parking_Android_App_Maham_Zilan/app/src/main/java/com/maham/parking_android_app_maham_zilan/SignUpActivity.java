@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.maham.parking_android_app_maham_zilan.model.User;
 import com.maham.parking_android_app_maham_zilan.viewmodel.UserViewModel;
@@ -50,6 +51,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                         //go to main activity
                         this.goToMain();
+                        Toast toast = Toast.makeText(getApplicationContext(), "Creating user account successfully", Toast.LENGTH_LONG);
+                        toast.show();
                     }
                 }
                 default: break;
@@ -67,6 +70,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         newUser.setContactNumber(this.edtContactNumber.getText().toString());
         //Save User to DB
         this.userViewModel.addUser(newUser);
+
     }
 
     private void goToMain(){
