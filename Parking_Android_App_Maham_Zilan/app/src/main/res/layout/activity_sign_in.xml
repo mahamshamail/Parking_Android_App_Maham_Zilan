@@ -7,6 +7,14 @@
     android:padding="30dp"
     tools:context=".SignInActivity">
 
+    <ImageView
+        android:id="@+id/torontoImg"
+        android:layout_width="343dp"
+        android:layout_height="261dp"
+        android:src="@drawable/toronto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <EditText
         android:id="@+id/edtEmail"
         android:layout_width="0dp"
@@ -19,14 +27,13 @@
         android:hint="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/torontoImg" />
 
     <EditText
         android:id="@+id/edtPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ems="10"
-
         android:inputType="textPassword"
         android:hint="@string/password"
         app:layout_constraintStart_toStartOf="parent"
